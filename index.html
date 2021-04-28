@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>The Art Collector</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div id="title">
+        <h1>
+          The Art Collector
+        </h1>
+        <h5>
+          Search the Harvard Art Museums' Private Collections
+        </h5>
+      </div>
+      <form id="search">
+        <fieldset>
+          <label for="keywords">Query</label>
+          <input id="keywords" type="text" placeholder="enter keywords..." />
+        </fieldset>
+        <fieldset>
+          <label for="select-classification">Classification <span class="classification-count"></span></label>
+          <select name="classification" id="select-classification">
+            <option value="any">Any</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <label for="select-century">Century <span class="century-count"></span></label>
+          <select name="century" id="select-century">
+            <option value="any">Any</option>
+          </select>
+        </fieldset>
+        <button>SEARCH</button>
+      </form>
+      <aside id="preview">
+        <header class="pagination">
+          
+          <button disabled class="previous">Previous</button>
+          <button disabled class="next">Next</button>
+        </header>
+        <div class="badDivs-Container">
+            <button class="badDivs">Hide Incomplete Results</button>
+        </div>
+        <section class="results">
+         
+        </section>
+      </aside>
+      <main id="feature">
+      </main>
+    </div>
+    <div id="loading">
+      <h2 class="message">Searching...</h2>
+    </div>
+  </body>
+  </html>
